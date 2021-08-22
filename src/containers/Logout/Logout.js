@@ -9,7 +9,7 @@ function Logout() {
     useEffect(() => {
         localStorage.removeItem('token')
         ctx.actions.setToken(null)
-        history.push('/login')
+        window.location.href = "/"
     }, [history, ctx.store.token, ctx.actions])
 
 

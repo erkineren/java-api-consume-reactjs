@@ -12,12 +12,16 @@ function App() {
 
     useEffect(() => {
 
-        if (ctx.store.token) {
-            ctx.api.setToken(ctx.store.token)
-            history.push('/home')
-        } else {
-            history.push('/login')
-        }
+        // setTimeout(() => {
+            let token = localStorage.getItem('token')
+            console.log("token",token)
+            if (token) {
+                ctx.api.setToken(token)
+                history.push('/home')
+            } else {
+                history.push('/login')
+            }
+        // }, 200)
     }, [history, ctx.store.token])
 
 

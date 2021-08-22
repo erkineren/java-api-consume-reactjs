@@ -27,7 +27,7 @@ function ProductTable() {
                     <Table.Cell width={3}>{d.title}</Table.Cell>
                     <Table.Cell width={2}>{d.supplierName}</Table.Cell>
                     <Table.Cell width={2}>{d.price} TL</Table.Cell>
-                    <Table.Cell width={2}>{d.stock}</Table.Cell>
+                    <Table.Cell width={1}>{d.stock}</Table.Cell>
                     <Table.Cell width={2}>{d.status}</Table.Cell>
                     <Table.Cell width={2}>{d.approvalStatus}</Table.Cell>
                 </>

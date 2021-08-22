@@ -97,6 +97,9 @@ function EntityTable({route, header, row, side, onSearchTerm}) {
                                             history.push(`/${route}/${d.id}`)
                                         }}
                                     />
+                                    <div style={{
+                                        margin: "1rem"
+                                    }} />
                                     <Button
                                         icon={"delete"}
                                         size={'mini'}

@@ -29,7 +29,8 @@ function Login() {
                 toast("Login success")
                 localStorage.setItem('token', res.data.accessToken);
                 ctx.actions.setToken(res.data.accessToken)
-                // setTimeout(() => history.push('/home'), 500)
+                ctx.api.setToken(ctx.store.token)
+                setTimeout(() => window.location.reload(), 100)
             })
             .catch((e) => {
                 const res = e.response.data;
